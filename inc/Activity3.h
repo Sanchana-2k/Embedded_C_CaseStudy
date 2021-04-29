@@ -1,5 +1,5 @@
 /**
- * @file Activity3.c
+ * @file Activity3.h
  * @author S Sanchana
  * @brief Modulate PWM output based on Temperature Sensor value
  * @version 0.1

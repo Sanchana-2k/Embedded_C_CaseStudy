@@ -1,5 +1,5 @@
 /**
- * @file Activity4.c
+ * @file Activity4.h
  * @author S Sanchana
  * @brief Send Temperature Value via UART
  * @version 0.1
