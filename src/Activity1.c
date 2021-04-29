@@ -8,6 +8,9 @@
  * @copyright Copyright (c) 2021
  * 
  */
+#ifndef __AVR_ATmega328__
+    #define __AVR_ATmega328__
+#endif
 
 #include "Activity1.h"
 
@@ -26,26 +29,35 @@ void gpio_init(void){
 }
 
 /**
+ * @brief Change State of the LED
+ * 
+ * @param state ON or OFF state
+ */
+void change_led_state(uint8_t state){
+	LED_PORT = (state << LED_PIN);
+}
+
+/**
  * @brief If Occupancy status is true (ON) AND if heater status is true (ON) then: Turn ON Heater (Make LED glow)
  * 
  * @return uint8_t ON or OFF status of the heater
  */
 uint8_t heater_status (void){
-    if (!(PIND&(1<<PD0))){
-                if (!(PIND&(1<<PD3))){
-                    PORTB |= (1<<PB0);
-                    _delay_ms(100);
-                    return 1;
-                }
-                else{
-                    PORTB &= ~(1<<PB0);
-                    _delay_ms(100);
-                    return 0;
-                }
+    if (OCCUPANCY){
+        if (HEATER_BUTTON){
+            change_led_state(LED_ON);
+            _delay_ms(100);
+            return 1;
         }
         else{
-            PORTB &= ~(1<<PB0);
+            change_led_state(LED_OFF);
             _delay_ms(100);
             return 0;
         }
+    }
+    else{
+        change_led_state(LED_OFF);
+        _delay_ms(100);
+        return 0;
+    }
 }
