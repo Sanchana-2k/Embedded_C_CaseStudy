@@ -19,7 +19,7 @@
  * @brief Initialize ADC for aquiring Temperature Sensor (Potentiometer) value
  * 
  */
-void InitADC(void){
+void ADC_init(void){
     ADMUX=(1<<REFS0); // For Aref=AVcc;
 
     ADCSRA=(1<<ADEN)|(7<<ADPS0); //Enable ADC and set 128 prescaler

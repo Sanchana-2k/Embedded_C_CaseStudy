@@ -19,7 +19,7 @@
  * @brief Initialize ADC for aquiring Temperature Sensor (Potentiometer) value
  * 
  */
-void InitADC(void);
+void ADC_init(void);
 
 /**
  * @brief Read the Temperature Sensor (Potentiometer) value via ADC

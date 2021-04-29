@@ -14,13 +14,16 @@
 
 #include "Activity1.h"
 #include "Activity2.h"
+#include "Activity3.h"
 
 int main(void){
 
     // GPIO Initialization
     gpio_init();
     // ADC Initialization
-    InitADC();
+    ADC_init();
+    // PWM Initialization
+    pwm_init();
 
     while (1){
         uint8_t status=0;
@@ -32,7 +35,7 @@ int main(void){
         if (status==1){
             sensor_val = ReadADC(0);
             _delay_ms(200);
-
+            PWM_output(sensor_val);
         }
     }
 
