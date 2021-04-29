@@ -28,11 +28,10 @@ int main(void){
     while (1){
         uint8_t status=0;
 
-        uint16_t sensor_val = 0;
-
         status = heater_status();
 
         if (status==1){
+            uint16_t sensor_val = 0;
             sensor_val = ReadADC(0);
             _delay_ms(200);
             PWM_output(sensor_val);

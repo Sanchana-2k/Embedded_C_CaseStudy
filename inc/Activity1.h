@@ -15,10 +15,8 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-/**
- * @brief Macro Definitions
- * 
- */
+// Macro Definitions
+
 #define OCCUPANCY (!(PIND&(1<<PD0)))  /**< Check Seat Occupancy*/
 #define HEATER_BUTTON (!(PIND&(1<<PD3)))  /**< Check if Heater Button if ON or OFF */
 
