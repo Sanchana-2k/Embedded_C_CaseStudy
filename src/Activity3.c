@@ -54,3 +54,12 @@ void PWM_output(uint16_t data){
         _delay_ms(200);
     }
 }
+
+/**
+ * @brief Turn OFF Output of PWM when Heater is off
+ * 
+ */
+void PWM_heaterOFF(void){
+    OCR1A = 0; //0% duty cycle
+     _delay_ms(200);
+}

@@ -28,4 +28,10 @@ void pwm_init(void);
  */
 void PWM_output(uint16_t);
 
+/**
+ * @brief Turn OFF Output of PWM when Heater is off
+ * 
+ */
+void PWM_heaterOFF(void);
+
 #endif
