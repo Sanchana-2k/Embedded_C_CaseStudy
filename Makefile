@@ -4,7 +4,8 @@ BUILD_DIR = Build
 
 # All Source code files
 SRC = SeatHeatingSystem.c\
-src/Activity1.c
+src/Activity1.c\
+src/Activity2.c
 
 # All header file paths
 INC = -I inc

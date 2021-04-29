@@ -1,7 +1,7 @@
 /**
  * @file Activity1.c
  * @author S Sanchana
- * @brief 
+ * @brief If Occupancy status is true (ON) AND if heater status is true (ON) then: Turn ON Heater
  * @version 0.1
  * @date 2021-04-24
  * 
@@ -9,11 +9,12 @@
  * 
  */
 
-#include <avr/io.h>
-#include <util/delay.h>
-
 #include "Activity1.h"
 
+/**
+ * @brief Initialize GPIO Pins for aquiring status
+ * 
+ */
 void gpio_init(void){
     DDRB |= (1<<PB0); //SET PB0=1 i.e., SET PB0 as Output Pin
 
@@ -24,6 +25,11 @@ void gpio_init(void){
     PORTD |= (1<<PD3); // Set bit PD3 to 1
 }
 
+/**
+ * @brief If Occupancy status is true (ON) AND if heater status is true (ON) then: Turn ON Heater (Make LED glow)
+ * 
+ * @return uint8_t ON or OFF status of the heater
+ */
 uint8_t heater_status (void){
     if (!(PIND&(1<<PD0))){
                 if (!(PIND&(1<<PD3))){
