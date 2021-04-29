@@ -1,7 +1,7 @@
 /**
  * @file SeatHeatingSystem.c
  * @author S Sanchana
- * @brief 
+ * @brief Notify the Seat Heating Status of the User
  * @version 0.1
  * @date 2021-04-24
  * 

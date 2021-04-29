@@ -1,6 +1,6 @@
 /**
  * @file Activity2.h
- * @author your name (you@domain.com)
+ * @author S Sanchana
  * @brief Read the Temperature Sensor (Potentiometer) value via ADC
  * @version 0.1
  * @date 2021-04-26
@@ -24,7 +24,7 @@ void InitADC(void);
 /**
  * @brief Read the Temperature Sensor (Potentiometer) value via ADC
  * 
- * @param ch The to which the ADC is connected
+ * @param ch Channel to which the ADC is connected
  * @return uint16_t Temperature Sensor (Potentiometer) value
  */
 uint16_t ReadADC(uint8_t);

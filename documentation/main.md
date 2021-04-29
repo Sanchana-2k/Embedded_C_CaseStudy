@@ -1,1 +1,1 @@
-@mainpage Blinky Example by Bharath G @subpage project_main.c
+@mainpage Seat Heating Status System - S Sanchana @subpage SeatHeatingSystem.c
