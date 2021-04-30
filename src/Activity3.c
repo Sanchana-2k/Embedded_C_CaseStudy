@@ -34,7 +34,7 @@ void pwm_init(void){
  */
 void PWM_output(uint16_t data){
     //use ADC output data to define PWM duty cycle
-    if (data<=200){
+    if (data>=0 && data<=200){
         OCR1A = 204; //20% duty cycle
         _delay_ms(200);
     }

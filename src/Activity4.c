@@ -58,7 +58,7 @@ void USARTWritechar(char data){
  */
 void USART_display(uint16_t data){
     int i = 0;
-    if (data<=200){
+    if (data>=0 && data<=200){
         unsigned char reading[]="Temperature: 20 deg C";
         i = 0;
         while(reading[i] != 0) //Loop to Write every character of Reading
