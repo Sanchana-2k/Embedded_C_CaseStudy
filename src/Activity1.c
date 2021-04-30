@@ -29,34 +29,25 @@ void gpio_init(void){
 }
 
 /**
- * @brief Change State of the LED
- * 
- * @param state ON or OFF state
- */
-void change_led_state(uint8_t state){
-	LED_PORT = (state << LED_PIN);
-}
-
-/**
  * @brief If Occupancy status is true (ON) AND if heater status is true (ON) then: Turn ON Heater (Make LED glow)
  * 
  * @return uint8_t ON or OFF status of the heater
  */
 uint8_t heater_status (void){
-    if (OCCUPANCY){
-        if (HEATER_BUTTON){
-            change_led_state(LED_ON);
+    if (CHECK_OCCUPANCY){
+        if (CHECK_HEATER_BUTTON){
+            LED_PORT |= (1<<LED_PIN); // Turn ON LED
             _delay_ms(100);
             return 1;
         }
         else{
-            change_led_state(LED_OFF);
+            LED_PORT &= ~(1<<LED_PIN); // Turn OFF LED
             _delay_ms(100);
             return 0;
         }
     }
     else{
-        change_led_state(LED_OFF);
+        LED_PORT &= ~(1<<LED_PIN); // Turn OFF LED
         _delay_ms(100);
         return 0;
     }
