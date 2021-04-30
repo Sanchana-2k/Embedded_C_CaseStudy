@@ -17,6 +17,11 @@
 #include "Activity3.h"
 #include "Activity4.h"
 
+/**
+ * @brief Runs the Application
+ * 
+ * @return int Returns 0 on successful completion
+ */
 int main(void){
 
     // GPIO Initialization
@@ -39,7 +44,7 @@ int main(void){
             sensor_val = ReadADC(0); // Read sensor value
             _delay_ms(200);
             PWM_output(sensor_val); // Show output as PWM
-            USART_display(sensor_val); // Send temp value viw USART to serial monitor
+            USART_display(sensor_val); // Send temp value via USART to serial monitor
         }
         else{
             PWM_heaterOFF(); // Switch off (make PWM output as zero) if heater is off
