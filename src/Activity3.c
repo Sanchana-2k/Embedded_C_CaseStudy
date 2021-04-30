@@ -34,19 +34,19 @@ void pwm_init(void){
  */
 void PWM_output(uint16_t data){
     //use ADC output data to define PWM duty cycle
-    if (data>=0 && data<=200){
+    if (data<=200){
         OCR1A = 204; //20% duty cycle
         _delay_ms(200);
     }
-    else if (data>=210 && data<=500){
+    else if (data>=201 && data<=500){
         OCR1A = 409; //40% duty cycle
         _delay_ms(200);
     }
-    else if (data>=510 && data<=700){
+    else if (data>=501 && data<=700){
         OCR1A = 716; //70% duty cycle
         _delay_ms(200);
     }
-    else if (data>=710 && data<=1024){
+    else if (data>=701 && data<=1024){
         OCR1A = 971; //95% duty cycle
         _delay_ms(200);
     }
