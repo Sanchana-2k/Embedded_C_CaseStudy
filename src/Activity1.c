@@ -12,6 +12,7 @@
     #define __AVR_ATmega328__
 #endif
 
+#include "configuration.h"
 #include "Activity1.h"
 
 /**
