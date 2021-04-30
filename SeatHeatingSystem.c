@@ -49,8 +49,8 @@ int main(void){
             USART_display(sensor_val); // Send temp value via USART to serial monitor
         }
         else{
-            PWM_heaterOFF(); // Switch off (make PWM output as zero) if heater is off
-            USART_HeaterOFF(); // Show Heater OFF output when heater is off
+            PWM_heaterOFF(); // Switch off (make PWM output as zero) if heater is off or driver not seated
+            USART_HeaterOFF(); // Show Heater OFF output when heater is off or driver not seated
         }
     }
 

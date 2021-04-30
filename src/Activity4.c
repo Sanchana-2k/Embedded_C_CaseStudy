@@ -113,7 +113,7 @@ void USART_display(uint16_t data){
  */
 void USART_HeaterOFF(void){
     int i = 0;
-    unsigned char heater_off[]="Heater OFF";
+    unsigned char heater_off[]="Heater OFF or Driver not seated";
     i = 0;
     while(heater_off[i] != 0) //Loop to Write every character of Reading
     {
