@@ -33,7 +33,7 @@ int main(void){
     // PWM Initialization
     pwm_init();
     //USART Initialization
-    USART_init(103);
+    USART_init(BAUD_RATE);
 
     while (1){
         // Variable to store status of the Heater
@@ -43,7 +43,7 @@ int main(void){
 
         if (status==1){
             uint16_t sensor_val = 0; // Variable to store sensor value
-            sensor_val = ReadADC(0); // Read sensor value
+            sensor_val = ReadADC(ADC_CHANNEL); // Read sensor value
             _delay_ms(200);
             PWM_output(sensor_val); // Show output as PWM
             USART_display(sensor_val); // Send temp value via USART to serial monitor

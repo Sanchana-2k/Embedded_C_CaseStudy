@@ -15,6 +15,10 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
+// Macro Definitions
+
+#define BAUD_RATE 103 /**< Set baud rate*/
+
 /**
  * @brief Initialize UART to send Temperature Reading Output
  * 

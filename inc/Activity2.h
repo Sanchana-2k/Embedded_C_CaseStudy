@@ -15,6 +15,11 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
+// Macro Definitions
+
+#define ADC_CHANNEL 0  /**< Set ADC channel*/
+
+
 /**
  * @brief Initialize ADC for aquiring Temperature Sensor (Potentiometer) value
  * 
