@@ -15,7 +15,7 @@ The System checks if the seat is occupied and if the the heater is switched ON
 
         1. The PWM output is made zero
 
-        2. Serial monitor shows "Heater OFF"
+        2. Serial monitor shows "Heater OFF or Driver not seated"
 
 
 @subpage SeatHeatingSystem.c
