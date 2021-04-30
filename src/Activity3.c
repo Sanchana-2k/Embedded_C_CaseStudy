@@ -47,7 +47,7 @@ void PWM_output(uint16_t data){
         _delay_ms(200);
     }
     else if (data>=701 && data<=1024){
-        OCR1A = 971; //95% duty cycle
+        OCR1A = 972; //95% duty cycle
         _delay_ms(200);
     }
     else{
